@@ -101,7 +101,7 @@ Required libraries for Python along with their version numbers used while making
 4. Review `config.py` for paths and other configurations (explained below).
 5. Run `test.py`.
 
-## 6. Configurations (config.py)
+## 6. Configurations (config cell in the notebook)
 
 **config**
 
