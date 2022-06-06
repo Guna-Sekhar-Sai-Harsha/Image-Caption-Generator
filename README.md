@@ -1,6 +1,6 @@
 ## Image Caption Generator
 
-A neural network to generate captions for an image using CNN and RNN with BEAM Search.
+A neural network to generate captions for an image using CNN and LSTM & GRU with BEAM Search.
 
 <p align="center">
   <strong>Examples</strong>
@@ -21,7 +21,7 @@ A neural network to generate captions for an image using CNN and RNN with BEAM S
 3. [Generated Captions on Test Images](#3-generated-captions-on-test-images)
 4. [Procedure to Train Model](#4-procedure-to-train-model)
 5. [Procedure to Test on new images](#5-procedure-to-test-on-new-images)
-6. [Configurations (config.py)](#6-configurations-configpy)
+6. [Configurations](#6-configurations)
 7. [Frequently encountered problems](#7-frequently-encountered-problems)
 8. [TODO](#8-todo)
 9. [References](#9-references)
@@ -62,8 +62,10 @@ Required libraries for Python along with their version numbers used while making
 
 #### NOTE
 
-- `batch_size=64` took ~14GB GPU memory in case of *InceptionV3 + AlternativeRNN* and *VGG16 + AlternativeRNN*
-- `batch_size=64` took ~8GB GPU memory in case of *InceptionV3 + RNN* and *VGG16 + RNN*
+- `batch_size=64` took ~14GB GPU memory in case of *InceptionV3 + AlternativeLSTM* and *VGG16 + AlternativeLSTM*
+- `batch_size=64` took ~8GB GPU memory in case of *InceptionV3 + LSTM* and *VGG16 + LSTM*
+- `batch_size=64` took ~8GB GPU memory in case of *InceptionV3 + GRU* and *VGG16 + GRU*
+
 - **If you're low on memory**, use google colab or reduce batch size
 - In case of BEAM Search, `loss` and `val_loss` are same as in case of argmax since the model is same
 
@@ -87,7 +89,7 @@ Required libraries for Python along with their version numbers used while making
 ## 4. Procedure to Train Model
 
 1. Clone the repository to preserve directory structure.<br>
-`[git clone https://github.com/dabasajay/Image-Caption-Generator.git](https://github.com/Guna-Sekhar-Sai-Harsha/Image-Caption-Generator)`
+`https://github.com/Guna-Sekhar-Sai-Harsha/Image-Caption-Generator`
 2. Put the required dataset files in `train_val_data` folder (files mentioned in readme there).
 3. Review `configuration cell` for paths and other configurations (explained below).
 4. Run `Image_Caption_Generator.ipynb`.
@@ -95,11 +97,11 @@ Required libraries for Python along with their version numbers used while making
 ## 5. Procedure to Test on new images
 
 1. Clone the repository to preserve directory structure.<br>
-`[git clone https://github.com/dabasajay/Image-Caption-Generator.git](https://github.com/Guna-Sekhar-Sai-Harsha/Image-Caption-Generator)`
+`https://github.com/Guna-Sekhar-Sai-Harsha/Image-Caption-Generator`
 2. Train the model to generate required files in `model_data` folder (steps given above).
 3. Put the test images in `test_data` folder.
 4. Review `configuration cell` for paths and other configurations (explained below).
-5. Run `test cell` in 'Image_Caption_Generator.ipynb'.
+5. Run `test cell` in `Image_Caption_Generator.ipynb`.
 
 ## 6. Configurations (config cell in the notebook)
 
