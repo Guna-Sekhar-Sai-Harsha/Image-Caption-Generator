@@ -21,7 +21,7 @@ A neural network to generate captions for an image using CNN and LSTM & GRU with
 3. [Generated Captions on Test Images](#3-generated-captions-on-test-images)
 4. [Procedure to Train Model](#4-procedure-to-train-model)
 5. [Procedure to Test on new images](#5-procedure-to-test-on-new-images)
-6. [Configurations](#6-configurations)
+6. [Configurations](#6-Configurations (config-cell-in-the-notebook))
 7. [Frequently encountered problems](#7-frequently-encountered-problems)
 8. [TODO](#8-todo)
 9. [References](#9-references)
